@@ -32,3 +32,44 @@ pets.forEach(pet => {
 });
 
 document.querySelector(".animals").appendChild(wrapper)
+
+// Fliter
+const fliterButton = document.querySelectorAll(".fliter-nav a")
+fliterButton.forEach(el => {
+    el.addEventListener("click", e => handleFliterClick(e))
+} )
+
+function handleFliterClick(e){
+    let target = e.target
+
+    if(e.target.classList.contains("only-large-screen")){
+        target = e.target.closest("a")
+    }
+
+    e.preventDefault()
+
+    fliterButton.forEach(el => {
+        el.classList.remove("active")
+    })
+    target.classList.add("active")
+
+    fliterPets(target.dataset.fliter)
+}
+
+function fliterPets(species){
+const allPets = document.querySelectorAll(".animal-card")
+    if(species == "all"){
+        allPets.forEach(el => {
+            el.style.display = ""
+        })
+    }else{
+        allPets.forEach(el => {
+            if(el.querySelector(".species").textContent == species){
+                el.style.display = ""
+            }else{
+                el.style.display = "none"
+            }
+        })
+        
+    }
+}

@@ -12,3 +12,21 @@
     border-radius: 4px;
     margin: 4px;
 }
+
+.fliter-nav a:hover{
+    background-color: #e0b4e0;
+}
+
+.fliter-nav .active{
+    background-color: #702acb;
+    color: #fff;
+}
+
+.fliter-nav .active:hover{
+    background-color: #702acb;
+    cursor: default;
+}
+
+.only-large-sreen{
+    display: none;
+}
