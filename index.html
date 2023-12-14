@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatiable" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, inital-scale=1.0"/>
     <title>Pet Adoption List</title>
+    
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/fliter-nav.css">
     <link rel="stylesheet" href="css/animal-card.css">
+
+    <script type="module" src="js/card.js"></script>
 </head>
 
 <body>
@@ -19,25 +22,28 @@
     </div>
 
     <div class="fliter-nav">
-        <a href="#">All Animal</a>
-        <a href="#">Only Dogs</a>
-        <a href="#">Only Cats</a>
-        <a href="#">Only Rabbits</a>
+        <a href="#" data-fliter="all">All Animal</a>
+        <a href="#" data-fliter="dog">Only Dogs</a>
+        <a href="#" data-fliter="cat">Only Cats</a>
+        <a href="#" data-fliter="rabbit">Only Rabbits</a>
     </div>
 
     <div class="animals">
+    </div>
+
+    <template id="animal-card">
         <div class="animal-card">
             <div class = animal-card-text>
-                <h3>Meowsalot</h3>
-                <small><span>3 Years old</span> - <span class="species">Cat</span></small>
+                <h3></h3>
+                <small><span class="age">3 Years old</span> - <span class="species">Cat</span></small>
                 <p class="description">Meowsalot is a talkative friend that loves to play and is great with children. He is looking for a forever home today!</p>
-                <a href="#" class="primary-btn">Adpot Meowsalot</a>
+                <a href="#" class="primary-btn">Adpot <span class="name"></span></a>
             </div>
             <div class = animal-card-photo>
                 <img src="https://learnwebcode.github.io/pet-adoption-data/photos/meowsalot.webp" alt="A cat name Meowsalot"/>
             </div>
         </div>
-    </div>
+    </template>
 </body>
 
 </html>
