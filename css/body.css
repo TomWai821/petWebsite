@@ -1,5 +1,10 @@
-body{
+html, body{
     padding: 0px; 
     margin: 0px; 
     overflow-x: hidden;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: rgb(206, 209, 219);
 }

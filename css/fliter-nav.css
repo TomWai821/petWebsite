@@ -1,0 +1,14 @@
+.fliter-nav{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.fliter-nav a{
+    text-decoration: none;
+    padding: 9px;
+    color: #7c109a;
+    border: 2px solid #e0b4e0;
+    border-radius: 4px;
+    margin: 4px;
+}
